@@ -3,6 +3,8 @@ import "../styles/Wrapper.css";
 
 // this function builds the Wrapper that is imported in App.js
 // it becomes the main container of the DOM
+// Wrapper is used if you want to apply custom coding
+// children with their own unique code would use that rather than what is used in Wrapper
 function Wrapper({ children }) {
     return (
         <div className="wrapper">

@@ -6,10 +6,13 @@ function SearchBox({ handleSearchChange }) {
         <div className="searchbox">
             <form className="form-inline">
                 <input
-                    className="form-controol"
+                    className="form-control"
                     type="search"
                     placeholder="Search"
                     aria-label="Search"
+                    // when a change happens, the handleSearchChange is called, which
+                    // bubbles back up thru the tree (from here --> Nav -->DataArea)
+                    // to where the function is defined
                     onChange={e => handleSearchChange(e)}
                 />
             </form>

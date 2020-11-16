@@ -18,6 +18,7 @@ function DataBody({ users }) {
             {/* this checks to make sure there is at least one user and they have a name */}
             {users[0] !== undefined && users[0].name !== undefined ? (
                 // these 6 attributes are all from the object from the API call
+                // these are deconstructed from user
                 users.map(({ login, name, picture, phone, email, dob }) => {
                     return (
                         <tr key={login.uuid}>

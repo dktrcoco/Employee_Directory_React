@@ -4,6 +4,7 @@ import React from "react";
 import DataBody from "./DataBody";
 import "../styles/DataTable.css";
 
+// no state in the datatable, just pure js
 function DataTable({ headings, users, handleSort }) {
     return (
         <div className="datatable mt-5">
@@ -17,7 +18,7 @@ function DataTable({ headings, users, handleSort }) {
                             return (
                                 <th
                                     className="col"
-                                    hey={name}
+                                    key={name}
                                     style={{ width }}
                                     onClick={() => {
                                         handleSort(name.toLowerCase());
@@ -31,7 +32,7 @@ function DataTable({ headings, users, handleSort }) {
                     </tr>
                 </thead>
 
-                <DataBody users={users} />F
+                <DataBody users={users} />
             </table>
         </div>
     );
