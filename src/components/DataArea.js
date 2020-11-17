@@ -12,6 +12,20 @@ export default class DataArea extends Component {
         filteredUsers: [{}]
     }
 
+    // looking at how else I could define state in order to sort by different headings
+    // state = {
+    //     users: [{}],
+    //     order: "name-descend",
+    //     filteredUsers: [{}]
+    // }
+
+    // state = {
+    //     users: [{}],
+    //     sortOrder: "descend",
+    //     sortField: "name",
+    //     filteredUsers: [{}]
+    // }
+
     componentDidMount() {
         API.getUsers().then(results => {
             this.setState({
@@ -85,7 +99,7 @@ export default class DataArea extends Component {
         // setting the state of filteredUsers to sortedUsers
         this.setState({ filteredUsers: sortedUsers });
 
-        const compareDOB = (a, b) =>{
+        const compareEmail = (a, b) =>{
             if (this.state.order = "ascend") {
                 // accounts for missing values
                 if (a[heading] === undefined) {
@@ -94,7 +108,7 @@ export default class DataArea extends Component {
                     return -1;
                 }
                 // numerically
-                else if (heading === "DOB") {
+                else if (heading === "Email") {
                     // first is a jquery function that returns the first index of an array
                     // localeCompare is a string function
                     return a[heading].first.localeCompare(b[heading].first);
