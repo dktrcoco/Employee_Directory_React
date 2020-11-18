@@ -16,17 +16,20 @@ AS A USER I want to be able to view my entire employee directory at once so I ha
 
 ## Images
 
-Fig. 1: Landing Page Before Data
-![Landing Page](./public/assets/img/initial.PNG)
+Fig. 1: Landing Page
+![Landing Page](./public/assets/img/landing.PNG)
 
-Fig. 2: Budget Data Displayed
-![Page_With_Data](./public/assets/img/data.PNG)
+Fig. 2: Example of Search Functionality
+![Search Functionality](./public/assets/img/search.PNG)
 
 ## Gifs
 
-Gif 1: Offline Functionality
+Gif 1: Updating State
 
-![Offline_Functionality](./public/assets/gif/offline.gif)
+![Updating State](./public/assets/gif/update.gif)
+
+Gif 2: Sorting By Name
+![Sorting](./public/assets/gif/sort.gif)
 
 ## Install
 
